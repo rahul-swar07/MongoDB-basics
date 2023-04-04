@@ -27,6 +27,7 @@ CRUD
 - db --> tells the name of the database that you are currently using.
 - show dbs --> shows the list of all the databases which are present in that particular connection along with their data usage.
 - db.dropDatabase() --> drops / deletes the current database.
+- db.COLLECTION_NAME.drop() --> drops / deletes the collection COLLECTION_NAME from the current database.
 - db.createCollection("myCollection") --> creates a new collection inside the current database called "myCollection".
 - show collections --> shows all the collections list present inside the current database.
 - db.myCollection.insert({"name" : "Rahul Swar}) --> inserts {"name" : "Rahul Swar} Document in "myCollection" Collection of the current database if it already exists, else it will create a new collection "myCollection" in the current database and then add the {"name" : "Rahul Swar} Document inside it.
@@ -87,3 +88,9 @@ Aggregation
 - db.students.aggregate([{$group : {_id : "$gender", MinAge : {$min : "$age"}}}]) --> aggregation to get minimum age of "Male" and "Female" documents based on "gender" field inside "students" collection of "school" database.
 
 MongoDB BackUp and Restore
+- To BackUp all dbs - mongodump (in admin command prompt) --> dump folder inside bin folder gets created with all dbs info.
+- To Restore all dbs - mongorestore (in admin command prompt) --> restores the dropped / deleted dbs.
+- To BackUp single db - mongodump --db <NAME_OF_DB> (in admin command prompt) --> dump folder inside bin folder gets created with all db info.
+- To Restore single db - mongorestore --db <NAME_OF_DB> <PATH_OF_DB> (in admin command prompt) --> restores the dropped / deleted db.
+- To BackUp single Collection from a db - mongodump --db <NAME_OF_DB> --collection <NAME_OF_COLLECTION> (in admin command prompt) --> dump folder inside bin folder gets created with all db collection info.
+- To Restore single Collection from a db - mongorestore --db <NAME_OF_DB> --collection <NAME_OF_COLLECTION> <PATH_OF_COLLECTION> (in admin command prompt) --> restores the dropped / deleted collection inside db.
