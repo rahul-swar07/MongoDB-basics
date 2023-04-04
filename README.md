@@ -47,7 +47,10 @@ When you do not specify your own "_id" in your documents, MongoDB assigns a uniq
 This is an alphanumeric string of length 24 (by default, but can be cahnged to any length).
 
 AND OR condition
-
+- db.students.find({"firstName" : "Rahul", "age" : "22"}) --> querying using AND operation
+- db.students.find({$and : [{"firstName" : "Rahul"}, {"age" : "22"}]}) --> alternative for querying using AND operation
+- db.students.find({$or : [{"firstName" : "Rahul"}, {"age" : "22"}]}) --> querying using OR operation
+- db.students.find({"lastName" : "Swar", $or : [{"age" : "22"}, {"age" : "25"}]}) --> querying using combination and AND as well as OR operations.
 
 Projections
 
