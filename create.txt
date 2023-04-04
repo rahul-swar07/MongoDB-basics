@@ -1,0 +1,11 @@
+use school
+
+db.createCollection("students") 
+
+show collections
+
+db.students.insert(
+    {
+        "name" : "Rahul Swar
+    }
+)

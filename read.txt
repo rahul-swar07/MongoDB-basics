@@ -1,0 +1,39 @@
+db
+
+show dbs
+
+use school
+db.students.find()
+db.students.find().pretty()
+
+db.students.findOne()
+
+db.students.find(
+    {
+        "age" : {$gt : "19"}
+    }
+)
+
+db.students.find(
+    {
+        "age" : {$gte : "19"}
+    }
+)
+
+db.students.find(
+    {
+        "age" : {$lt : "21"}
+    }
+)
+
+db.students.find(
+    {
+        "age" : {$lte : "21"}
+    }
+)
+
+db.students.find(
+    {
+        "age" : {$ne : "19"}
+    }
+)

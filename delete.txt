@@ -1,0 +1,24 @@
+db.dropDatabase()
+
+use school
+db.students.find()
+
+db.students.remove()
+
+db.student.remove(
+    {
+        "_id" : ObjectId("642b9ef3fd37db5e8abceaf4")
+    }
+) 
+
+db.student.remove(
+    {
+        "age" : "22"
+    }
+) 
+
+db.student.remove(
+    {
+        "age" : "22"
+    }, 1
+)
