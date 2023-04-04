@@ -1,0 +1,40 @@
+use temp
+
+for(i = 0; i < 10000000; ++i) {
+    db.posts.insert(
+        {
+            "student_id" : i,
+            "name" : "Rahul"
+        }
+    )
+}
+
+db.posts.find(
+    {
+        "student_id" : 1000
+    }
+)
+
+db.posts.findOne(
+    {
+        "student_id" : 1000
+    }
+)
+
+db.posts.ensureIndex(
+    {
+        "student_id" : 1
+    }
+)
+
+db.posts.find(
+    {
+        "student_id" : 9999
+    }
+)
+
+db.posts.dropIndex(
+    {
+        "student_id" : 1
+    }
+)

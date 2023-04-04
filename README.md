@@ -73,7 +73,12 @@ Using Sort , skip , limit functions
 - sort - db.students.find({}, {"firstName" : 1, "age" : 1, "_id" : 0}).sort({"firstName" : 1}) --> sorts the outputs in ascending order of their firstNames. (here "firstName" field is used to sort, 1 means ascending order, -1 means descending order) (since "firstName" is a string, hence it will follow lexicographic order).
 
 Indexing
-
+- Indexes are special data structures, that store a small portion of data, set in the easy to pass way. 
+- Indexes are supposed to make efficient resolution of queries.
+- Without indexes, it is very inefficient to query a document out of millions of documents in a database or a collection of the database.
+- db.posts.ensureIndex({"student_id" : 1}) --> does the indexing of all the documents in the "posts" collection of "temp" db, which speeds up the query time.
+- Important condition for indexing : All indexes of all the documents must be unique.
+- db.posts.dropIndex({"student_id" : 1}) --> removes / drops the indexing of all the documents in the "posts" collection of "temp" db.
 
 Aggregation
 
