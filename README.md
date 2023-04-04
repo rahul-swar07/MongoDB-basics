@@ -61,7 +61,10 @@ AND OR condition
 - db.students.find({"lastName" : "Swar", $or : [{"age" : "22"}, {"age" : "25"}]}) --> querying using combination and AND as well as OR operations.
 
 Projections
-
+- Projections means selecting / querying only the necessary data, rather than selecting / querying whole of the data of the document.
+- db.COLLECTIN_NAME.find({}, {KEY : 1})  --> KEY here is the field or property of the document, 1 means that it's set to true, that means we want to see this key results, 0 means it's set to false, which means we don't want to see this key results.
+- db.students.find({},{"firstName" : 1}) --> displays the "firstName" fields of all the documents present in the "students" collection of the "school" db. (also "_id" field is visible, as it comes by default).
+- db.students.find({},{"firstName" : 1, "_id" : 0}) --> displays only the "firstName" fields of all the documents and not the "_id" field, present in the "students" collection of the "school" db.
 
 Indexing
 
