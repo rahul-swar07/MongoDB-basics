@@ -81,5 +81,9 @@ Indexing
 - db.posts.dropIndex({"student_id" : 1}) --> removes / drops the indexing of all the documents in the "posts" collection of "temp" db.
 
 Aggregation
+- Aggregation operation groups values from various documents together and can perform various operations on the grouped data and returns a single result after the operation.
+- db.students.aggregate([{$group : {_id : "$gender", MyResult : {$sum : 1}}}]) --> aggregation to get count of number of "Male" and "Female" documents based on "gender" field inside "students" collection of "school" database.
+- db.students.aggregate([{$group : {_id : "$gender", MaxAge : {$max : "$age"}}}]) --> aggregation to get maximum age of "Male" and "Female" documents based on "gender" field inside "students" collection of "school" database.
+- db.students.aggregate([{$group : {_id : "$gender", MinAge : {$min : "$age"}}}]) --> aggregation to get minimum age of "Male" and "Female" documents based on "gender" field inside "students" collection of "school" database.
 
-
+MongoDB BackUp and Restore

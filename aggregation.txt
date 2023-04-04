@@ -1,0 +1,26 @@
+use school
+db.students.find()
+
+db.students.aggregate(
+    [
+        {
+            $group : {_id : "$gender", MyResult : {$sum : 1}}
+        }
+    ]
+)
+
+db.students.aggregate(
+    [
+        {
+            $group : {_id : "$gender", MaxAge : {$max : "$age"}}
+        }
+    ]
+)
+
+db.students.aggregate(
+    [
+        {
+            $group : {_id : "$gender", MinAge : {$min : "$age"}}
+        }
+    ]
+)
