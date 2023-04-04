@@ -66,10 +66,13 @@ Projections
 - db.students.find({},{"firstName" : 1}) --> displays the "firstName" fields of all the documents present in the "students" collection of the "school" db. (also "_id" field is visible, as it comes by default).
 - db.students.find({},{"firstName" : 1, "_id" : 0}) --> displays only the "firstName" fields of all the documents and not the "_id" field, present in the "students" collection of the "school" db.
 
-Indexing
-
-
 Using Sort , skip , limit functions
+- limit - db.students.find({}, {"firstName" : 1, "age" : 1, "_id" : 0}).limit(4) --> limit is used to fetch only a precise number of outputs n. (in this case n = 4).
+- skip - db.students.find({}, {"firstName" : 1, "age" : 1, "_id" : 0}).skip(2) --> skip is used to skip the first n results obtained and output the results obtained after the skipped documents. (in this case n = 2).
+- db.students.find({}, {"firstName" : 1, "age" : 1, "_id" : 0}).skip(2).limit(4) --> skips the first two, and then limits the number of outputs to 4 out of te remaining.
+- sort - db.students.find({}, {"firstName" : 1, "age" : 1, "_id" : 0}).sort({"firstName" : 1}) --> sorts the outputs in ascending order of their firstNames. (here "firstName" field is used to sort, 1 means ascending order, -1 means descending order) (since "firstName" is a string, hence it will follow lexicographic order).
+
+Indexing
 
 
 Aggregation
