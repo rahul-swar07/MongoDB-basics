@@ -1,0 +1,67 @@
+use school
+db.students.insert(
+    {
+        "studentNumber" : "1",
+        "firstName" : "Rahul",
+        "lastName" : "Swar",
+        "age" : "22"
+    }
+)
+db.students.insert(
+    [
+        {
+            "studentNumber" : "1",
+            "firstName" : "Riya",
+            "lastName" : "Swar",
+            "age" : "25"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Sheel",
+            "lastName" : "Angle",
+            "age" : "22"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Subhav",
+            "lastName" : "Borker",
+            "age" : "21"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Kunal",
+            "lastName" : "Gaonkar",
+            "age" : "23"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Harsh",
+            "lastName" : "Kerkar",
+            "age" : "19"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Jay",
+            "lastName" : "Vadolkar",
+            "age" : "22"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Raunak",
+            "lastName" : "Shirodkar",
+            "age" : "19"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Nagaraj",
+            "lastName" : "Hegde",
+            "age" : "21"
+        },
+        {
+            "studentNumber" : "1",
+            "firstName" : "Darshan",
+            "lastName" : "Illiger",
+            "age" : "21"
+        }
+    ]
+)
